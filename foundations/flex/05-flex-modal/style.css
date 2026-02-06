@@ -1,3 +1,9 @@
+/* from first glance, the left icon is in one container, the title and button are another container, with the button justify-content: flex-end. The title, text, and button are three seperate containers.
+
+So two containers, the left side containing the icon, then the main content. Inside the main content, the title+button, text, and buttons are their own container*/
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 html, body {
@@ -20,6 +26,9 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .icon {
@@ -33,6 +42,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .close-button {
@@ -66,4 +76,21 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
